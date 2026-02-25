@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akuegbo Iheanyi Ejeagba — Full-Stack Developer</title>
+  <meta name="description" content="Full-Stack Developer building scalable, responsive, and production-ready web applications using modern JavaScript technologies." />
+  <meta property="og:title" content="Akuegbo Iheanyi Ejeagba — Full-Stack Developer" />
+  <meta property="og:description" content="Full-Stack Developer building scalable, production-ready web applications." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
+  <header class="nav" id="nav" role="banner">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo" aria-label="Home">
+        <span class="nav__logo-bracket">[</span>AIE<span class="nav__logo-bracket">]</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav__links" id="navLinks" role="list">
+          <li><a href="#about"    class="nav__link" data-section="about">About</a></li>
+          <li><a href="#stack"    class="nav__link" data-section="stack">Stack</a></li>
+          <li><a href="#projects" class="nav__link" data-section="projects">Projects</a></li>
+          <li><a href="#contact"  class="nav__link" data-section="contact">Contact</a></li>
+          <li>
+            <a href="assets/resume.pdf" class="nav__link nav__resume" download aria-label="Download Resume PDF">
+              Resume <span aria-hidden="true">↓</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="nav__hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav__overlay" id="navOverlay" aria-hidden="true"></div>
+
+  <main>
+
+    <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <div class="hero__bg-grid" aria-hidden="true"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <div class="hero__inner">
+        <div class="hero__content">
+          <div class="hero__badge" aria-label="Status: Available for work">
+            <span class="hero__badge-dot" aria-hidden="true"></span>
+            Available for opportunities
+          </div>
+          <h1 class="hero__title">
+            <span class="hero__title-line" data-aos>Hi, I'm <em>Iheanyi.</em></span>
+            <span class="hero__title-line hero__title-line--sub" data-aos data-aos-delay="100">I build things</span>
+            <span class="hero__title-line hero__title-line--sub" data-aos data-aos-delay="200">for the <em>web.</em></span>
+          </h1>
+          <p class="hero__sub" data-aos data-aos-delay="300">
+            Full-Stack Developer specialising in scalable, production-ready web applications.
+            I work across the entire stack — from database design to deployed UI — and care deeply
+            about clean architecture, performance, and user experience.
+          </p>
+          <div class="hero__cta" data-aos data-aos-delay="400">
+            <a href="#projects" class="btn btn--primary">See My Work</a>
+            <a href="#contact"  class="btn btn--ghost">Hire Me</a>
+          </div>
+          <div class="hero__scroll-hint" aria-hidden="true">
+            <span>Scroll</span>
+            <div class="hero__scroll-line"></div>
+          </div>
+        </div>
+
+        <div class="hero__visual" data-aos data-aos-delay="200">
+          <div class="hero__photo-wrapper">
+            <!-- Added my picture -->
+            <div class="hero__photo" id="heroPhoto">
+              <img 
+                src="assets/images/profile.jpg" 
+                alt="Akuegbo Ejeagba, Full-Stack Developer"
+                id="profileImg"
+              />
+              <div class="hero__photo-fallback" id="photoFallback" aria-hidden="true">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="35" r="18" stroke="#c8f542" stroke-width="2"/>
+                  <path d="M15 90c0-19.33 15.67-35 35-35s35 15.67 35 35" stroke="#c8f542" stroke-width="2"/>
+                </svg>
+                <span>Your Photo</span>
+              </div>
+            </div>
+            <div class="hero__photo-accent" aria-hidden="true"></div>
+          </div>
+
+          <div class="terminal" role="region" aria-label="Skills terminal">
+            <div class="terminal__bar" aria-hidden="true">
+              <span class="terminal__dot terminal__dot--red"></span>
+              <span class="terminal__dot terminal__dot--yellow"></span>
+              <span class="terminal__dot terminal__dot--green"></span>
+              <span class="terminal__title">iheanyi@portfolio ~ </span>
+            </div>
+            <div class="terminal__body" id="terminalOutput" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+    <section class="section about" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section__header" data-aos>
+          <span class="section__tag">// 01 — About Me</span>
+          <h2 class="section__title" id="about-heading">
+            I think in systems,<br/>not just screens.
+          </h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__text" data-aos>
+            <p>
+              I'm a Full-Stack Developer who builds complete, production-ready web applications. 
+              I work across the entire stack — designing schemas, building APIs, crafting 
+              performant UIs — and I care about how all the pieces fit together.
+            </p>
+            <p>
+              My approach is simple: understand the problem deeply, architect a clean solution, 
+              then ship it with attention to performance, accessibility, and long-term maintainability.
+              I don't just write code — I build systems that can grow.
+            </p>
+            <p>
+              When I'm not coding, I'm studying system design, contributing to open-source,
+              and staying current with the evolving JavaScript ecosystem.
+            </p>
+            <div class="about__facts">
+              <div class="fact" data-aos data-aos-delay="100">
+                <span class="fact__num" data-count="3">0</span><span class="fact__num">+</span>
+                <span class="fact__label">Years Building</span>
+              </div>
+              <div class="fact" data-aos data-aos-delay="200">
+                <span class="fact__num" data-count="15">0</span><span class="fact__num">+</span>
+                <span class="fact__label">Projects Shipped</span>
+              </div>
+              <div class="fact" data-aos data-aos-delay="300">
+                <span class="fact__num">∞</span>
+                <span class="fact__label">Problems Solved</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__photo-col" data-aos data-aos-delay="150">
+            <div class="about__photo-frame">
+              <img 
+                src="assets/images/profile.jpg" 
+                alt="Akuegbo Iheanyi Ejeagba"
+                class="about__photo-img"
+                id="aboutPhoto"
+              />
+              <div class="about__photo-fallback" id="aboutFallback">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="50" cy="35" r="20" stroke="#c8f542" stroke-width="1.5"/>
+                  <path d="M10 95c0-22 18-40 40-40s40 18 40 40" stroke="#c8f542" stroke-width="1.5"/>
+                </svg>
+                <p>Add your photo to<br/><code>assets/images/profile.jpg</code></p>
+              </div>
+              <div class="about__photo-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="about__photo-tag" aria-hidden="true">
+              <span class="about__photo-tag-dot"></span>
+              Open to work
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ STACK ═══════════════════════════════ -->
+    <section class="section stack" id="stack" aria-labelledby="stack-heading">
+      <div class="container">
+        <div class="section__header" data-aos>
+          <span class="section__tag">// 02 — Tech Stack</span>
+          <h2 class="section__title" id="stack-heading">Tools I build with.</h2>
+          <p class="section__sub">Technologies I use daily to ship production-grade applications.</p>
+        </div>
+
+        <div class="stack__categories" id="stackCategories">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ PROJECTS ═══════════════════════════════ -->
+    <section class="section projects" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section__header" data-aos>
+          <span class="section__tag">// 03 — Projects</span>
+          <h2 class="section__title" id="projects-heading">Case Studies.</h2>
+          <p class="section__sub">Full breakdowns of what I built, the problems I solved, and how I built them.</p>
+        </div>
+
+        <div class="projects__list" id="projectsList" role="list">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact__inner">
+          <div class="contact__text" data-aos>
+            <span class="section__tag">// 04 — Contact</span>
+            <h2 class="section__title" id="contact-heading">Let's build<br/>something great.</h2>
+            <p>
+              Open to full-time roles, contract projects, and interesting collaborations.
+              Whether you have a role in mind or just want to connect — my inbox is open.
+            </p>
+            <div class="contact__links" role="list">
+              <a href="mailto:ejeagbaakuegbo@gmail.com" class="contact__link" role="listitem">
+                <span class="contact__link-label">Email</span>
+                <span class="contact__link-value">ejeagbaakuegbo@gmail.com <span aria-hidden="true">↗</span></span>
+              </a>
+              <a href="https://github.com/iheanyi11" target="_blank" rel="noopener noreferrer" class="contact__link" role="listitem">
+                <span class="contact__link-label">GitHub</span>
+                <span class="contact__link-value">github.com/iheanyi11 <span aria-hidden="true">↗</span></span>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact__form" id="contactForm" data-aos data-aos-delay="150" novalidate aria-label="Contact form">
+            <div class="form__group">
+              <label class="form__label" for="name">Your Name</label>
+              <input class="form__input" type="text" id="name" name="name" placeholder="John Smith" autocomplete="name" required />
+              <span class="form__error" id="nameError" aria-live="polite"></span>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="email">Email Address</label>
+              <input class="form__input" type="email" id="email" name="email" placeholder="john@company.com" autocomplete="email" required />
+              <span class="form__error" id="emailError" aria-live="polite"></span>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="subject">Subject</label>
+              <input class="form__input" type="text" id="subject" name="subject" placeholder="Job opportunity / Project collab" required />
+              <span class="form__error" id="subjectError" aria-live="polite"></span>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="message">Message</label>
+              <textarea class="form__input form__textarea" id="message" name="message" placeholder="Tell me about the role or project..." rows="5" required></textarea>
+              <span class="form__error" id="messageError" aria-live="polite"></span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+              <span id="submitText">Send Message</span>
+              <span class="btn__spinner" id="btnSpinner" aria-hidden="true"></span>
+            </button>
+            <div class="form__success" id="formSuccess" role="alert" aria-live="assertive">
+              <span>✓</span> Message sent! I'll get back to you within 24 hours.
+            </div>
+            <p class="form__note">
+              ※ Form uses <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a> — replace the action URL with your endpoint.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__copy">
+          © <span id="year"></span> Akuegbo Iheanyi Ejeagba. Designed &amp; built with HTML, CSS &amp; JS.
+        </p>
+        <div class="footer__links">
+          <a href="https://github.com/iheanyi11" target="_blank" rel="noopener">GitHub</a>
+          <a href="assets/resume.pdf" download>Resume</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="projects/project-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

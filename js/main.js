@@ -58,7 +58,7 @@ const STACK = [
 
 const TERMINAL_SEQUENCE = [
   { type: "prompt", text: "whoami" },
-  { type: "output", text: "Alex Morgan — Full-Stack Developer", cls: "t-success" },
+  { type: "output", text: "Akuegbo Iheanyi Ejeagba — Full-Stack Developer", cls: "t-success" },
   { type: "gap" },
   { type: "prompt", text: "cat skills.json | jq .frontend" },
   { type: "output", text: '[ "HTML", "CSS", "JavaScript", "React" ]', cls: "t-info" },
@@ -471,17 +471,15 @@ function initContactForm() {
        * 4. Remove the simulate block below
        */
 
-      // ── SIMULATION (remove this block when you have a real endpoint) ──
-      await new Promise(resolve => setTimeout(resolve, 1500));
       // ─────────────────────────────────────────────────────────────────
 
       // ── REAL SUBMISSION (uncomment when ready) ──
-      // const res = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
-      //   method: "POST",
-      //   headers: { "Accept": "application/json" },
-      //   body: new FormData(form),
-      // });
-      // if (!res.ok) throw new Error("Submission failed");
+      const res = await fetch("https://formspree.io/f/xvzbdkvw", {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: new FormData(form),
+      });
+      if (!res.ok) throw new Error("Submission failed");
       // ───────────────────────────────────────────
 
       // Success
